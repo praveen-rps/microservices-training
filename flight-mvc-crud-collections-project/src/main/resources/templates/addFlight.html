@@ -1,0 +1,16 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2 align="center" style="color:Blue">Flight Management System</h2>
+	<form th:action="@{/addFlightData}" th:object="${flight}"  method="get">
+		Enter Flight Id<input type="text" name="flightId" th:field="*{flightId}"/><br> 
+		Enter Flight Provider:<input type="text" name="name" th:field="*{provider}"/><br> 
+		Enter Source<input type="text" name="source" th:field="*{source}"/><br> 
+		Enter Destination<input type="text" name="destination" th:field="*{destination}"/><br>
+		<input type="submit" value="Add Flight" />
+	</form>
+</body>
+</html> 
