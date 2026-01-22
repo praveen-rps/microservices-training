@@ -1,0 +1,50 @@
+1. What is the Spring Framework? Why is it used?
+2. Explain Inversion of Control (IoC) and Dependency Injection (DI).
+3. What are the different types of dependency injection in Spring?
+4. What is the difference between ApplicationContext and BeanFactory?
+5. Explain Spring Bean and its lifecycle.
+6. What are the different scopes of Spring Beans?
+7. What is the role of @Component, @Service, @Repository, and @Controller annotations?
+8. What is Spring AOP? How is it different from OOP?
+9. What is a Proxy in Spring AOP? Explain JDK Dynamic Proxy vs. CGLIB Proxy.
+10. How does Spring handle transactions?
+11. What is the difference between @Autowired, @Resource, and @Inject?
+12. How does Spring handle circular dependencies?
+13. What is the difference between @Transactional on methods and classes?
+14. What is the difference between programmatic and declarative transaction management?
+15. What is Spring JDBC? How does it differ from Hibernate?
+16. Explain the difference between @Controller and @RestController.
+17. How can you define a custom scope for a Spring bean?
+18. What is @PostConstruct and @PreDestroy? How is it different from InitializingBean and DisposableBean?
+19. What is the DispatcherServlet? How does it work?
+20. Explain the purpose of HandlerInterceptor in Spring MVC.
+21. What is Spring Boot? How is it different from the Spring Framework?
+22. What are the advantages of using Spring Boot?
+23. What is Spring Boot Starter? Explain its role.
+24. What is the purpose of application.properties and application.yml?
+25. What is the difference between @SpringBootApplication and @EnableAutoConfiguration?
+26. How does Spring Boot handle dependency management?
+27. How do you create a simple REST API in Spring Boot?
+28. How does Spring Boot handle embedded servers?
+29. What are the different ways to configure a Spring Boot application?
+30. How can you enable logging in Spring Boot?
+31. How can you implement security in Spring Boot?
+32. How do you configure multiple databases in a Spring Boot application?
+33. How do you handle exceptions in Spring Boot using @ControllerAdvice?
+34. What is Spring Boot DevTools? What are its benefits?
+35. What is the purpose of spring-boot-starter-data-jpa?
+36. What is @SpringBootTest? How does it help in testing?
+37. What is Flyway and Liquibase in Spring Boot? How do they work?
+38. How do you configure Spring Boot for different environments (e.g., dev, test, prod)?
+39. How do you expose and consume REST APIs in Spring Boot?
+40. How does Spring Boot internally handle autoconfiguration?
+41. What is the spring.factories file in Spring Boot?
+42. How do you implement microservices using Spring Boot?
+43. What is Circuit Breaker, and how can it be implemented in Spring Boot?
+44. How do you configure rate limiting in a Spring Boot microservice?
+45. How do you secure Spring Boot microservices using API Gateway and JWT?
+46. Explain the internal working of Spring AOP.
+47. How does Spring Boot handle exception handling globally?
+48. How does Spring Security work? Explain authentication and authorization mechanisms.
+49. How can you enable CORS in a Spring MVC application?
+50. What is the purpose of Spring Profiles? How do you implement them?
