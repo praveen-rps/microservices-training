@@ -1,0 +1,16 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: demo_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+  nginx:
+    image: nginx:alpine
+    container_name: demo_nginx
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    depends_on:
+      - redis

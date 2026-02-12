@@ -1,0 +1,127 @@
+STEP 1: Start Docker Desktop & Enable Kubernetes
+
+Open Docker Desktop
+
+Go to:
+
+Settings → Kubernetes
+
+
+✅ Enable Kubernetes
+
+Click Apply & Restart
+
+
+STEP 2: Verify Kubernetes is Running
+kubectl get nodes
+
+
+
+STEP 3: Create Sample Application (Spring Boot Example)
+
+
+STEP 4: Create Dockerfile
+
+Create Dockerfile inside project root:
+
+FROM openjdk:17
+WORKDIR /app
+COPY target/demo-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java","-jar","app.jar"]
+
+
+STEP 5: Build Docker Image
+docker build -t demo-app:1.0 .
+
+
+
+STEP 6: Create Kubernetes Deployment YAML
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: demo-app
+  template:
+    metadata:
+      labels:
+        app: demo-app
+    spec:
+      containers:
+        - name: demo-container
+          image: demo-app:1.0
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+
+
+STEP 7: Create Service YAML
+Create service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-service
+spec:
+  type: NodePort
+  selector:
+    app: demo-app
+  ports:
+    - port: 80
+      targetPort: 8080
+      nodePort: 30007
+
+
+
+STEP 8: Deploy to Kubernetes
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+
+
+
+STEP 9: Access Application
+http://localhost:30007
+
+
+
+STEP 11: Scale Application
+kubectl scale deployment demo-deployment --replicas=4
+kubectl get pods
+
+
+
+STEP 12: Rolling Update Demo
+
+Update image version:
+
+docker build -t demo-app:2.0 .
+
+
+
+Edit deployment.yaml:
+
+image: demo-app:2.0
+
+
+
+kubectl apply -f deployment.yaml
+
+
+Watch rollout:
+
+kubectl rollout status deployment demo-deployment
+
+
+
+STEP 13: Delete Everything
+kubectl delete -f deployment.yaml
+kubectl delete -f service.yaml
+
+
+
+
+
+
+
