@@ -1,0 +1,64 @@
+package com.example.demo.service;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
+@Component
+public class ProductServiceImpl {
+	
+	Logger logger = LoggerFactory.getLogger(ProductServiceImpl.class);
+	
+	public void placeOrder() {
+		//logger.info("Log is called...!");
+		System.out.println("Order is successfully placed");
+	}
+	
+	public void placeShipment() {
+		//logger.info("Log is called...!");
+		System.out.println("Order is successfully shipped");
+	}
+	
+	public void payment() {
+		//logger.info("Log is called...!");
+		System.out.println("Payment is successful");
+	}
+
+	public String getAddress() throws Exception {
+		 throw new Exception("Exception is thrown");
+		//return "Hyderabad";
+	}
+}
+
+
+package com.example.demo.service;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
+@Component
+public class ProductServiceImpl {
+	
+	Logger logger = LoggerFactory.getLogger(ProductServiceImpl.class);
+	
+	public void placeOrder() {
+		//logger.info("Log is called...!");
+		System.out.println("Order is successfully placed");
+	}
+	
+	public void placeShipment() {
+		//logger.info("Log is called...!");
+		System.out.println("Order is successfully shipped");
+	}
+	
+	public void payment() {
+		//logger.info("Log is called...!");
+		System.out.println("Payment is successful");
+	}
+
+	public String getAddress() throws Exception {
+		 throw new Exception("Exception is thrown");
+		//return "Hyderabad";
+	}
+}
