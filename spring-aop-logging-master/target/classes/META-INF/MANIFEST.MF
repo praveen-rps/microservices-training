@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: PraveenKumarGS
+Build-Jdk: 21.0.9
+Implementation-Title: spring-aop-logging
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.javatechie
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/spring-aop-logging
+Created-By: Maven Integration for Eclipse
+
